@@ -1,5 +1,5 @@
 @extends('layouts.simple.master')
-@section('title', 'Project List')
+@section('title', 'Vendor Order List')
 
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/animate.css')}}">
@@ -11,12 +11,12 @@
 @endsection
 
 @section('breadcrumb-title')
-<h3>Project Create</h3>
+<h3>New Vendor Order</h3>
 @endsection
 
 @section('breadcrumb-items')
-<li class="breadcrumb-item">Project</li>
-<li class="breadcrumb-item active">Project Create</li>
+<li class="breadcrumb-item">Vendor Order</li>
+<li class="breadcrumb-item active">Create Vendor Order</li>
 @endsection
 
 @section('content')
@@ -26,74 +26,66 @@
       <div class="card">
         <div class="card-body">
           <div class="form theme-form">
+
             <div class="row">
-              <div class="col">
+              <div class="col-sm-6">
                 <div class="mb-3">
-                  <label>Project Title</label>
-                  <input class="form-control" type="text" placeholder="Project name *">
+                  <label>Design Name</label>
+                  <input class="form-control" type="text" placeholder="Design Name">
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col">
+
+              <div class="col-sm-6">
                 <div class="mb-3">
-                  <label>Client name</label>
-                  <input class="form-control" type="text" placeholder="Name client or company name">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="mb-3">
-                  <label>Project Rate</label>
-                  <input class="form-control" type="text" placeholder="Enter project Rate">
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <div class="mb-3">
-                  <label>Project Type</label>
+                  <label>Required Format</label>
                   <select class="form-select">
-                    <option>Hourly</option>
-                    <option>Fix price</option>
-                  </select>
+                    <option value="" selected="">Select</option>
+                    <option value="cdr">cdr</option>
+                    <option value="ai ">ai </option>
+                    <option value="eps">aps</option>
+                    <option value="others ">others </option>
+                   
+                    </select>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="mb-3">
-                  <label>Priority</label>
-                  <select class="form-select">
-                    <option>Low</option>
-                    <option>Medium</option>
-                    <option>High</option>
-                    <option>Urgent</option>
-                  </select>
-                </div>
-              </div>
+             
+    
             </div>
+
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="mb-3">
-                  <label>Project Size</label>
+                  <label>Printing Process</label>
                   <select class="form-select">
-                    <option>Small</option>
-                    <option>Medium</option>
-                    <option>Big</option>
-                  </select>
+                  <option value="" selected="">Select</option>
+                        <option value="Screen Printing">Screen Printing</option>
+                        <option value="DTG">DTG</option>
+                        <option value="DTF">DTF</option>
+                        <option value="Vinyle Cutting">Vinyle Cutting</option>
+                        <option value="Engraving">Engraving</option>
+                        <option value="4 Color Process">4 Color Process</option>
+                        <option value="Simulated Process">Simulated Process</option>
+                        <option value="For Flyer">For Flyer</option>
+                        <option value="Visiting Card Purpose">Visiting Card Purpose</option>
+                        <option value="Social Media Post">Social Media Post</option>
+                        <option value="Banner Purpose">Banner Purpose</option>
+                    </select>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-6">
                 <div class="mb-3">
-                  <label>Starting date</label>
-                  <input class="datepicker-here form-control" type="text" data-language="en">
+                  <label>Time Frame</label>
+                  <select class="form-select">
+                  <option value="">Select</option>
+                        <option value="normal" selected="">Normal (12 to 24 hours)</option>
+                        <option value="urgent">Urgent (4 to 12 hours)</option>
+                        <option value="rush">Super Rush (1 to 4 hours)</option>
+                    </select>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="mb-3">
-                  <label>Ending date</label>
-                  <input class="datepicker-here form-control" type="text" data-language="en">
-                </div>
-              </div>
+    
             </div>
+        
             <div class="row">
               <div class="col">
                 <div class="mb-3">

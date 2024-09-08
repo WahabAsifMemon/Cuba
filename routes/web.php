@@ -29,13 +29,35 @@ Route::prefix('dashboard')->group(function () {
 
 
 
-Route::prefix('project')->group(function () {
-    Route::get('projects', [MainController::class, 'projects'])->name('projects');
-    Route::get('projectCreate', [MainController::class, 'projectCreate'])->name('projectcreate');
+Route::prefix('order')->group(function () {
+    Route::get('new_order', [MainController::class, 'newOrder'])->name('newOrder');
+    Route::get('new_vendor', [MainController::class, 'newVendor'])->name('newVendor');
+    Route::get('new_patch', [MainController::class, 'newPatch'])->name('newPatch');
 
-    Route::get('estimate', [MainController::class, 'estimates'])->name('estimates');
+    Route::get('view_order', [MainController::class, 'viewOrder'])->name('viewOrder');
+    Route::get('view_vendor', [MainController::class, 'viewVendor'])->name('viewVendor');
+    Route::get('view_patch', [MainController::class, 'viewPatch'])->name('viewPatch');
 
 
+});
+
+Route::prefix('quote')->group(function () {
+    Route::get('new_quote', [MainController::class, 'newQuote'])->name('newQuote');
+    Route::get('new_vendor_quote', [MainController::class, 'newVendorQuote'])->name('newVendorQuote');
+    Route::get('new_patch_quote', [MainController::class, 'newPatchQuote'])->name('newPatchQuote');
+
+    Route::get('view_quote', [MainController::class, 'viewQuote'])->name('viewQuote');
+    
+
+});
+
+Route::prefix('balance')->group(function () {
+    Route::get('billing', [MainController::class, 'billing'])->name('billing');
+});
+
+Route::prefix('support')->group(function () {
+    Route::get('create_support', [MainController::class, 'createTicket'])->name('createTicket');
+    Route::get('view_ticket', [MainController::class, 'viewTicket'])->name('viewTicket');
 
 });
 

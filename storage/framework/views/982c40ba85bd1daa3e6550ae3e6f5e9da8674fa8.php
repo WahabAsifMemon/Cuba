@@ -1,19 +1,19 @@
-@extends('layouts.authentication.master')
-@section('title', 'Login')
 
-@section('css')
-@endsection
+<?php $__env->startSection('title', 'Login'); ?>
 
-@section('style')
-@endsection
+<?php $__env->startSection('css'); ?>
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('style'); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
 <div class="container-fluid p-0">
    <div class="row m-0">
       <div class="col-12 p-0">
          <div class="login-card">
             <div>
-               <div><a class="logo" href="{{ route('index') }}"><img class="img-fluid for-light" src="{{asset('assets/images/logo/login.png')}}" alt="looginpage"><img class="img-fluid for-dark" src="{{asset('assets/images/logo/logo_dark.png')}}" alt="looginpage"></a></div>
+               <div><a class="logo" href="<?php echo e(route('index')); ?>"><img class="img-fluid for-light" src="<?php echo e(asset('assets/images/logo/login.png')); ?>" alt="looginpage"><img class="img-fluid for-dark" src="<?php echo e(asset('assets/images/logo/logo_dark.png')); ?>" alt="looginpage"></a></div>
                <div class="login-main">
                   <form class="theme-form">
                      <h4>Sign in to account</h4>
@@ -32,12 +32,12 @@
                            <input id="checkbox1" type="checkbox">
                            <label class="text-muted" for="checkbox1">Remember password</label>
                         </div>
-                        <a class="link" href="{{ route('forget-password') }}">Forgot password?</a>
-                        <a class="btn btn-primary btn-block" href="{{ route('index') }}">Sign in</a>
+                        <a class="link" href="<?php echo e(route('forget-password')); ?>">Forgot password?</a>
+                        <a class="btn btn-primary btn-block" href="<?php echo e(route('index')); ?>">Sign in</a>
 
                      </div>
                     
-                     <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="{{  route('sign-up') }}">Create Account</a></p>
+                     <p class="mt-4 mb-0">Don't have account?<a class="ms-2" href="<?php echo e(route('sign-up')); ?>">Create Account</a></p>
                   </form>
                </div>
             </div>
@@ -45,7 +45,8 @@
       </div>
    </div>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('script')
-@endsection
+<?php $__env->startSection('script'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.authentication.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\laragon\www\Cuba\resources\views/authentication/login.blade.php ENDPATH**/ ?>

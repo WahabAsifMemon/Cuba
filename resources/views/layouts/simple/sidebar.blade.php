@@ -27,101 +27,84 @@
 
 					<li class="sidebar-main-title">
 						<div>
-							<h6 class="lan-8">Business</h6>
+							<h6 class="lan-8">Orders Managment</h6>
 						</div>
 					</li>
 					<li class="sidebar-list">
 						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="box"></i><span>Orders</span>
+							<i data-feather="shopping-cart"></i><span>Place Order</span>
 							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
 						</a>
 						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
+		                   
+						<li><a href="{{route('newOrder')}}" class="{{ Route::currentRouteName()=='newOrder' ? 'active' : '' }}">New Digitizing Order</a></li>
+						<li><a href="{{route('newVendor')}}" class="{{ Route::currentRouteName()=='newVendor' ? 'active' : '' }}">New Vendor Order</a></li>
+						<li><a href="{{route('newPatch')}}" class="{{ Route::currentRouteName()=='newPatch' ? 'active' : '' }}">New Patch Order</a></li>
 		                </ul>
 					</li>
 
 					<li class="sidebar-list">
 						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="box"></i><span>Estimates</span>
+							<i data-feather="eye"></i><span>View Order</span>
 							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
 						</a>
 						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
+		                   
+						<li><a href="{{route('viewOrder')}}" class="{{ Route::currentRouteName()=='viewOrder' ? 'active' : '' }}">View Digitizing Order</a></li>
+						<li><a href="{{route('viewVendor')}}" class="{{ Route::currentRouteName()=='viewVendor' ? 'active' : '' }}">View Vendor Order</a></li>
+						<li><a href="{{route('viewPatch')}}" class="{{ Route::currentRouteName()=='viewPatch' ? 'active' : '' }}">View Patch Order</a></li>
 		                </ul>
 					</li>
 
-					<li class="sidebar-list">
-						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="edit"></i><span>Edits </span>
-							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
-						</a>
-						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
-		                </ul>
-					</li>
+		
 					
 					
 
 					<li class="sidebar-main-title">
 						<div>
-							<h6>Account</h6>
+							<h6>Quote Managment</h6>
 						</div>
 					</li>
 
 					<li class="sidebar-list">
 						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="box"></i><span>Billing</span>
+							<i data-feather="file-text"></i><span>Place Quote</span>
 							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
 						</a>
 						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
+		                   
+						<li><a href="{{route('newQuote')}}" class="{{ Route::currentRouteName()=='newQuote' ? 'active' : '' }}">New Digitizing Quote</a></li>
+						<li><a href="{{route('newVendorQuote')}}" class="{{ Route::currentRouteName()=='newVendorQuote' ? 'active' : '' }}">New Vendor Quote</a></li>
+						<li><a href="{{route('newPatchQuote')}}" class="{{ Route::currentRouteName()=='newPatchQuote' ? 'active' : '' }}">New Patch Quote</a></li>
 		                </ul>
 					</li>
 
-					<li class="sidebar-list">
-						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="box"></i><span>Profile</span>
-							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
-						</a>
-						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
-		                </ul>
-					</li>
+					 <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='viewQuote' ? 'active' : '' }}" href="{{route('viewQuote')}}"><i data-feather="eye"> </i><span>View Quote</span></a></li>
 
-					<li class="sidebar-list">
-						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="edit"></i><span>Messages </span>
-							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
-						</a>
-						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
-		                </ul>
-					</li>
+
+
+			
 
 
 					<li class="sidebar-main-title">
 						<div>
-							<h6>Support</h6>
+							<h6>Balance Managment</h6>
 						</div>
 					</li>
-					<li class="sidebar-list">
-						<a class="sidebar-link sidebar-title {{request()->route()->getPrefix() == '/project' ? 'active' : '' }}" href="#">
-							<i data-feather="edit"></i><span>Help Disk </span>
-							<div class="according-menu"><i class="fa fa-angle-{{request()->route()->getPrefix() == '/project' ? 'down' : 'right' }}"></i></div>
-						</a>
-						<ul class="sidebar-submenu" style="display: {{ request()->route()->getPrefix() == '/project' ? 'block;' : 'none;' }}">
-		                    <li><a href="{{route('projects')}}" class="{{ Route::currentRouteName()=='projects' ? 'active' : '' }}">{{ trans('lang.Project List') }}</a></li>
-		                    <li><a href="{{route('projectcreate')}}" class="{{ Route::currentRouteName()=='projectcreate' ? 'active' : '' }}">{{ trans('lang.Create new') }}</a></li>
-		                </ul>
+					<li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='billing' ? 'active' : '' }}" href="{{route('billing')}}"><i data-feather="dollar-sign"> </i><span>Billing</span></a></li>
+					
+					<li class="sidebar-main-title">
+						<div>
+							<h6>Ticket Managment</h6>
+						</div>
 					</li>
 
-					{{-- <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='support-ticket' ? 'active' : '' }}" href="{{route('support-ticket')}}"><i data-feather="users"> </i><span>{{ trans('lang.Support Ticket') }}</span></a></li> --}}
+					<li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='createTicket' ? 'active' : '' }}" href="{{route('createTicket')}}"><i data-feather="file"> </i><span>Create Ticket</span></a></li>
+					<li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='viewTicket' ? 'active' : '' }}" href="{{route('viewTicket')}}"><i data-feather="eye"> </i><span>View Ticket</span></a></li>
+
+		
+					
+					<!-- <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav {{ Route::currentRouteName()=='support-ticket' ? 'active' : '' }}" href="{{route('support-ticket')}}"><i data-feather="users"> </i><span>{{ trans('lang.Support Ticket') }}</span></a></li>  -->
 				</ul>
 			</div>
 			<div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
