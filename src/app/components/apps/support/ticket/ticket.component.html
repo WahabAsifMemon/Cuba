@@ -1,0 +1,53 @@
+<app-breadcrumb [title]="'New Ticket'" [items]="['Ticket ']" [active_item]="'New Ticket'"></app-breadcrumb>
+<!-- Container-fluid starts-->
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-12">
+    <div class="card">
+        <div class="card-body">
+        <div class="form theme-form">
+            <div class="row">
+  
+
+            <div class="col">
+                <div class="form-group">
+                <label>Priority</label>
+                <select class="form-control digits">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                    <option>Urgent</option>
+                </select>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col">
+                <div class="form-group">
+                <label>Client name</label>
+                <input class="form-control" type="text" placeholder="Name client or company name">
+                </div>
+            </div>
+            </div>
+ 
+            <div class="row">
+            <div class="col">
+                <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                </div>
+            </div>
+            </div>
+ 
+            <div class="row">
+            <div class="col">
+                <div class="form-group mb-0"><a class="btn btn-success mr-3" href="#">Submit</a></div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<!-- Container-fluid Ends-->
